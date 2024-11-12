@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página Web de Padel" />
+    <meta name="keywords" content="Escuela de Padel en Madrid" />
+    <meta name="author" content="Pepe Vázquez" />
+    <title>Padel Kombat</title>
+    <link
+      rel="icon"
+      href="C:\Users\usuario\Documents\GitHub\html5_arquitectura_informacion\Assets\imagen icono/pelotapadel.png"
+      type="image/x-icon"
+    />
+
+    <style>
+      /* Estilos básicos para el cuerpo */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Estilos para el menú */
+      nav {
+        background-color: #333;
+        overflow: hidden;
+      }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav ul li {
+        flex: 1;
+      }
+      nav ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+      nav ul li a:hover {
+        background-color: #575757;
+      }
+
+      /* Estilos para el logo */
+      .logo {
+        text-align: left;
+        padding: 10px;
+        background-color: #333;
+      }
+      .logo img {
+        width: 150px;
+        height: auto;
+      }
+
+      /* Estilos para el video */
+      .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+      }
+
+      /* Estilos para el footer */
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+      }
+      footer p {
+        margin: 10px 0;
+        font-size: 14px;
+      }
+      footer ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+      }
+      footer ul li {
+        margin: 0 10px;
+      }
+      footer ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      footer ul li a:hover svg {
+        fill: #575757;
+      }
+      footer ul li svg {
+        width: 24px;
+        height: 24px;
+        fill: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="reserva_pista">
+          <img
+            src="assets/imagen_logo/logopadel.png"
+            alt="Logo de Padel Kombat"
+          />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="quienes_somos">Quiénes Somos</a></li>
+          <li><a href="tienda">Tienda</a></li>
+          <li><a href="reserva_pista">Reservar Pista</a></li>
+          <li><a href="clases_de_padel">Escuela de Padel</a></li>
+          <li><a href="contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Contenedor para centrar el video -->
+    <div class="video-container">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/d94PLn3BM2Q?si=B0MmQy4J7Tbl4W56"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <!-- Contenido de la página -->
+    <section id="quienes_somos">
+      <h2>Quiénes Somos</h2>
+      <p>
+        Escuela de Padel fundada en 2021, ofrecemos clases para todas las
+        edades, adaptados a tu nivel de juego. Ofrecemos tienda online para tu
+        material deportivo de Padel, para el juego contamos con cuatro pistas
+        techadas y tres exteriores (ver Reservar Pista)
+      </p>
+    </section>
+    <section id="tienda">
+      <h2>Tienda</h2>
+      <p>Productos disponibles</p>
+      <ul>
+        <li>Palas de Padel</li>
+        <li>Pelotas</li>
+        <li>Camisetas</li>
+        <li>Pantalones</li>
+        <li>Gorras</li>
+      </ul>
+    </section>
+    <section id="reserva_pista">
+      <h2>Reserva tu pista</h2>
+      <form action="reserva_de_pista" method="post">
+        <fieldset>
+          <label for="Reserva"
+            >Introduce los datos para la reserva de pista</label
+          >
+          <input type="text" name="nombre" placeholder="Nombre" required />
+          <input type="email" name="correo" required />
+          <select name="tipo_de_pista" required>
+            <option value="pista1">Pista Nº 1 Techada</option>
+            <option value="pista2">Pista Nº 2 Techada</option>
+            <option value="pista3">Pista Nº 3 Techada</option>
+            <option value="pista4">Pista Nº 4 Techada</option>
+            <option value="pista5">Pista Nº 5 Exterior</option>
+            <option value="pista6">Pista Nº 6 Exterior</option>
+            <option value="pista7">Pista Nº 7 Exterior</option>
+          </select>
+          <input
+            type="date"
+            name="fecha_reserva"
+            placeholder="Fecha Reserva"
+            required
+          />
+          <input type="submit" value="Confirmar Reserva" />
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Padel Kombat. Todos los derechos reservados.</p>
+      <ul>
+        <li>
+          <a
+            href="https://www.facebook.com"
+            aria-label="Facebook"
+            target="_blank"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M17 3.5a.5.5 0 0 0-.5-.5H14a4.77 4.77 0 0 0-5 4.5v2.7H6.5a.5.5 0 0 0-.5.5v2.6a.5.5 0 0 0 .5.5H9v6.7a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-6.7h2.62a.5.5 0 0 0 .49-.37l.72-2.6a.5.5 0 0 0-.48-.63H13V7.5a1 1 0 0 1 1-.9h2.5a.5.5 0 0 0 .5-.5z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com" aria-label="Twitter" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M8.08 20A11.07 11.07 0 0 0 19.52 9 8.09 8.09 0 0 0 21 6.16a.44.44 0 0 0-.62-.51 1.88 1.88 0 0 1-2.16-.38 3.89 3.89 0 0 0-5.58-.17A4.13 4.13 0 0 0 11.49 9C8.14 9.2 5.84 7.61 4 5.43a.43.43 0 0 0-.75.24 9.68 9.68 0 0 0 4.6 10.05A6.73 6.73 0 0 1 3.38 18a.45.45 0 0 0-.14.84A11 11 0 0 0 8.08 20"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com"
+            aria-label="Instagram"
+            target="_blank"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M12 2.2A9.8 9.8 0 1 0 21.8 12 9.81 9.81 0 0 0 12 2.2zm0 16a6.2 6.2 0 1 1 6.2-6.2A6.21 6.21 0 0 1 12 18.2zm5.3-8.7a1.28 1.28 0 1 1 1.28-1.28A"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
